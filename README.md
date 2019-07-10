@@ -58,19 +58,29 @@ api.resource('users', 1).list('blogPosts')
 
 api.namespace('users').list('blogPosts')
 api.namespace('admin_role/:type', { type: 1 }).list('blogPosts')
-
+#List/Index
 api.list('users', { limit: 3 })
+#Show
 api.index('users', { limit: 3 })
-
+#New
 api.show('users', { limit: 3 })
+#Create
 api.new('users', { limit: 3 })
+#Edit
 api.create('users', { email: 'john@doe.com' })
+#Update
 api.edit('users', { id: 1 })
+#Destroy
 api.update('users', { id: 1, name: 'John Doe' })
+#GET
 api.destroy('users', { id: 1 })
+#POST
 api.get('users/:id', { id: 1, hidePassword: true })
+#PATCH
 api.post('users/:id', { id: 1, name: 'John' })
+#PUT
 api.patch('users/:id', { id: 1, name: 'John' })
+#DELETE
 api.delete('users/:id', { id: 1, hidePassword: true })
 ```
 
